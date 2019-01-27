@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[latin1]{inputenc}
+
+\begin{document}
+Execise 7
+
+Theorem: Prove that for any natural number $2+2^2+2^3+...2^n = 2^{n+1} -2$
+
+Proof: We proof this theorem by induction. 
+\[A(n) = \sum_{i=1}^{n}(2^i), B(n) = 2^{n+1}-2\]
+\[A(1) = B(1)\]
+\[2^1 = 2^{1+1} -2 \]
+\[2 = 2 \]
+The theorem is true for 1. Furthermore it must be true for $n+1$ to be true.
+
+\[A(n+1) = B(n+1)\]
+\[\sum_{i=1}^{n+1}(2^i) = 2^{n+2}-2 \]
+Since we have a geometric series at the left hand side, we bring the sum into closed form first.
+\[\frac{2(1-2^{n+2})}{1-2} = 2^{n+2}-2 \]
+\[2^{n+2}-2 = 2^{n+2}-2, by\: Algebra \]
+
+Hence the theorem is true. 
+\end{document}
+
+
+
+\
+\\
+\\
+
+Execise 8
+
+Theorem: Prove (from the definition of a limit of a sequence) that if the
+sequence $\{a_n\}_{n=1}^{\infty}$ tends to limit $L$ as
+$n\rightarrow\infty$, then for any fixed number $M>0$ the sequence
+$\{Ma_n\}_{n=1}^{\infty}$ tends to the limit $ML$.
+
+Proof: We proof this theorem with the definition of a limit of a sequence. A sequence converges to a limit, if the following is true:
+
+\[\forall n(|x_n-L| < \frac{\epsilon}{|M|}), where\]
+\[\epsilon \in \mathbb{R}, \epsilon > 0, n \in \mathbb{N}, N \in \mathbb{N}, n \geq N\]
+
+Following this we get:
+\[|Mx_n-ML| < M\frac{\epsilon}{|M|}\]
+\[|M||x_n-L| < \epsilon\]
+
+Hence, the sequence converges to ML.
+
+
+\
+\\
+\\
+
+Execise 9
+
+Theorem: Given an infinite collection $A_n,n=1,2,...$ of intervals of the real line, their intersection is defined to be $\cap_{n=1}^{\infty}A_n=\{x|(\forall n)(x\in A_n)\}$. Give an example of a family of intervals $A_n,n=1,2,...$ such that $A_{n+1}\subset A_n$ for all $n$ and $\cap_{n=1}^{\infty}A_n=\O$. Prove that your example has the stated property.
+
+Proof: A family of intervalls with the mentioned properties are the following:
+\[A_n=(0,\frac{1}{n}), n = 1,2,...\]
+We proof the the first property by taking an $n \in N$.Then every element of those two intervall $(0,\frac{1}{n})$ and $(0,\frac{1}{n+1})$ are between 0 and $\frac{1}{n}$, respectively  $\frac{1}{n+1}$. Following that $\frac{1}{n+1} < \frac{1}{n}$, $A_{n+1}$ must be a subset of $A_n$.
+Now we have to proof the second property. As we learned from the first proof that the collection $A_{n+1}$ is always a subset of $A_n$, we can conclude that all $A_n$ are an intersection of $A_\infty$ when $n \to \infty$.
+Since $\lim \Limits_{n \to \infty} \frac{1}{n} = 0$, the intervall $(0, 0)$ is an empty set, which proofs the second property. 
+
+\
+\\
+\\
+
+Execise 10
+
+Theorem: Give an example of a family of intervals $A_n,n=1,2,...$ such that $A_{n+1}\subset A_n$ for all $n$ and $\cap_{n=1}^{\infty}A_n$ consists of a single real number. Prove that your example has the stated property.
+
+
+Proof: This proof is similar to theorem 9 but with an closed intervall. A family of intervalls with the mentioned properties are the following:
+\[A_n=[0,\frac{1}{n}], n = 1,2,...\]
+We proof the the first property by taking an $n \in N$.Then every element of those two intervall $[0,\frac{1}{n}]$ and $[0,\frac{1}{n+1}]$ are $0 \leq x \leq$ $\frac{1}{n}$, respectively  $\frac{1}{n+1}$. Following that $\frac{1}{n+1} < \frac{1}{n}$, $A_{n+1}$ must be a subset of $A_n$.
+Now we have to proof the second property. As we learned from the first proof that the collection $A_{n+1}$ is always a subset of $A_n$, we can conclude that all $A_n$ are an intersection of $A_\infty$ when $n \to \infty$.
+Since $\lim \Limits_{n \to \infty} \frac{1}{n} = 0$, the intervall $[0, 0]$ is a set, which consists only of a singular real number $0$.
+
+
+
